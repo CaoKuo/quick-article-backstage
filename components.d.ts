@@ -38,7 +38,6 @@ declare module 'vue' {
     Banner: typeof import('./src/components/login/banner.vue')['default']
     CreateUser: typeof import('./src/components/users/createUser.vue')['default']
     DeleteModal: typeof import('./src/components/modal/deleteModal.vue')['default']
-    DeleteModel: typeof import('./src/components/modal/deleteModel.vue')['default']
     Footer: typeof import('./src/components/footer/index.vue')['default']
     Header: typeof import('./src/components/layout/header.vue')['default']
     LoginForm: typeof import('./src/components/login/login-form.vue')['default']
