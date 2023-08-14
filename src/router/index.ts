@@ -42,10 +42,27 @@ const router: Router = createRouter({
                     path: '/articles',
                     name: 'articles',
                     meta: {
-                        icon: 'icon-bookmark',
+                        icon: 'icon-book',
                         title: '文章管理',
                     },
-                    component: async () => await import(/* webpackChunkName: "articles" */ '@/views/articles.vue'),
+                    component: async () => await import(/* webpackChunkName: "articles" */ '@/views/articles/index.vue'),
+                },
+                {
+                    path: '/articles/add',
+                    name: 'articles.add',
+                    meta: {
+                        hidden: true,
+                    },
+                    component: async () => await import(/* webpackChunkName: "articles" */ '@/views/articles/create.vue'),
+                },
+                {
+                    path: '/tags',
+                    name: 'tags',
+                    meta: {
+                        icon: 'icon-bookmark',
+                        title: '标签管理',
+                    },
+                    component: async () => await import(/* webpackChunkName: "tags" */ '@/views/tags.vue'),
                 },
             ],
         },

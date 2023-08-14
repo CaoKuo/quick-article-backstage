@@ -19,11 +19,15 @@ const menus = computed(() => {
 const showMenu = ref(false);
 
 const selectedKeys = computed(() => {
-    return [route.name]
+    let name = ''
+    if(route.name) {
+        name = (route.name as string).split('.')[0]
+    }
+   
+    return [name]
 })
 
 const handleClick = (key: any) => {
-    console.log('key===', key)
     router.push({
         name: key
     })

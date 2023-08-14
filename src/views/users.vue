@@ -121,7 +121,13 @@ const getUserList = async () => {
 
     loading.value = false;
     if(data.data) {
-        usersList.value = data.data.users;
+        const users = data.data.users;
+        if(users.length == 0 && pagination.pageNum > 1) {
+            pagination.pageNum --;
+            getUserList();
+            return;
+        }
+        usersList.value = users;
         pagination.total = data.data.total;
     }
 }

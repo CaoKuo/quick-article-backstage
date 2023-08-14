@@ -180,7 +180,7 @@ defineExpose({
 			</div>
 		</template>
         <template v-else>
-            <a-form ref="usersForm" :model="userInfo" :rules="rules" class="login-form" layout="vertical">
+            <a-form ref="usersForm" :model="userInfo" :rules="rules" layout="vertical">
                 <a-form-item field="email" label="邮箱" validate-trigger="blur">
                     <a-input v-model="userInfo.email" placeholder="请输入邮箱"></a-input>
                 </a-form-item>
